@@ -1,3 +1,5 @@
+use std::collections::VecDeque;
+
 use crate::memory::*;
 
 #[derive(Clone, Copy, Default)]
@@ -5,10 +7,20 @@ pub struct Value {
     pub value: f64,
 }
 
+#[derive(Clone)]
 pub struct ValueArray {
     pub capacity: usize,
     pub count: usize,
-    pub values: Vec<Value>,
+    pub values: VecDeque<Value>,
+}
+
+#[macro_export]
+macro_rules! new_value {
+    ($contents:expr) => {
+        Value {
+            value: $contents as f64
+        }
+    };
 }
 
 impl ValueArray {
@@ -16,7 +28,7 @@ impl ValueArray {
         Self {
             capacity: 0,
             count: 0,
-            values: vec![],
+            values: vec![].into(),
 
         }
     }
@@ -33,7 +45,7 @@ impl ValueArray {
     }
 
     pub fn free(&mut self) {
-        free_array(&self.values, self.capacity);
+        free_array(&mut self.values, self.capacity);
         *self = ValueArray::new();
     }
 }

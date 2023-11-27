@@ -1,38 +1,9 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
-    "files.associations": {
-        "chunk.h": "c",
-        "common.h": "c",
-        "memory.h": "c",
-        "vm.h": "c",
-        "value.h": "c",
-        "compiler.h": "c",
-        "debug.h": "c",
-        "scanner.h": "c",
-        "optional": "c",
-        "istream": "c",
-        "ostream": "c",
-        "system_error": "c",
-        "array": "c",
-        "functional": "c",
-        "tuple": "c",
-        "type_traits": "c",
-        "utility": "c",
-        "object.h": "c",
-        "errors.h": "c",
-        "*.tcc": "c",
-        "exception": "c",
-        "fstream": "c",
-        "new": "c",
-        "sstream": "c",
-        "stdexcept": "c",
-        "streambuf": "c",
-        "cstddef": "c",
-        "string.h": "c"
-    },
-    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
-        "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
-        "clang-analyzer-security.insecureAPI.strcpy",
-        "clang-analyzer-deadcode.DeadStores"
+
+"rust-analyzer.linkedProjects": [
+        //".\\Cargo.toml",
+        //"C:\\Users\\s614627\\Desktop\\motion-rs\\motion-rs\\Cargo.toml",
+        //".\\Cargo.toml"
     ]
+
 }
