@@ -8,6 +8,7 @@ mod value;
 
 
 fn main() {
+    pub static DEBUG_TRACE_EXEC: bool = true;
     let mut chunk: Chunk = Chunk::new();
 
     let constant = chunk.add_constant(value::Value { value: 1.2 });
